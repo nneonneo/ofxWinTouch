@@ -8,9 +8,9 @@ public:
     ofWinTouchEngine(ofBaseTouchApp* ofAppPtr);
     ~ofWinTouchEngine(void);
     
-	virtual void OnTouchDown(int id, int x, int y);
-	virtual void OnTouchMove(int id, int x, int y);
-	virtual void OnTouchUp(int id, int x, int y);
+	virtual void OnTouchDown(ofTouchEventArgs touch);
+	virtual void OnTouchMove(ofTouchEventArgs touch);
+	virtual void OnTouchUp(ofTouchEventArgs touch);
     
 	LRESULT processTouch(HWND hWnd, WPARAM wParam, LPARAM lParam);
     
